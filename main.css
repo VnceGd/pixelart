@@ -1,0 +1,487 @@
+/*Vincent Nguyen 2015-2016*/
+
+/*Animation*/
+@keyframes slide {
+  0% {opacity: 0; -webkit-transform: translateY(30%);}
+  100% {opacity: 1; -webkit-transform: translateY(0%);}
+}
+@-webkit-keyframes slide {
+  0% { opacity: 0; -webkit-transform: translateY(30%);} 
+  100% { opacity: 1; -webkit-transform: translateY(0%);}
+}
+
+.hiddenStuff {
+  visibility: hidden;
+}
+
+.visibleStuff {
+  visibility: visible;
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide; 
+  /* The duration of the animation */
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+}
+
+@keyframes slideNav {
+  from {top: -15%; }
+  to {top: -.6%; }
+}
+@keyframes fadeBG {
+  from {opacity: .7; -webkit-filter: blur(5px); filter: blur(5px);}
+  to {opacity: 1; -webkit-filter: blur(0px); filter: blur(0px);}
+}
+@keyframes fadeJumbo {
+  from {opacity: 0; top: 50%;}
+  to {opacity: 1; top: 25%;}
+}
+
+/*MOBILE ---------------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+  header {
+    width: 100%;
+    height: 60px;
+    background-color: #8C9EFF;
+    position: fixed;
+    padding-top: 5px;
+    z-index: 9999;
+  }
+  header li {
+    display: inline;
+  }
+  header .dropdown .btn btn-primary dropdown-toggle img {
+    width: 40px;
+    height: 40px;
+  }
+  header .dropdown .dropdown-menu img {
+    width: 24px;
+    height: 24px;
+  }
+  .pull-left li a {
+    display: none;
+  }
+  .pull-right li a {
+    display: none;
+  }
+  .pull-right img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  /*Body ---------------------------------------------------------------------- */
+  .body {
+    position: relative;
+  }
+  
+  /*Navigation Bar ------------------------------------------------------------ */
+  header .dropdown {
+    display: none;
+  }
+  header {
+    position: fixed;
+    top: -.6%;
+    width: 100%;
+    height: 70px;
+    background-color: #8C9EFF;
+    opacity: 0.8;
+    z-index: 5555;
+    transition: 0.3s;
+    animation-name: slideNav;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+  }
+  header:hover {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #8C9EFF;
+    box-shadow: 0px 0px 20px #000;
+    opacity: 1.0;
+    z-index: 9999;
+    transition: 0.2s;
+  }
+  header li {
+    display: inline;
+    float: left;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+  }
+  header li a {
+    position: relative;
+    display: block;
+    background-color: #536DFE;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 1px 0px 1px;
+    padding: 15px 14px 15px 14px !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .4s;
+  }
+  .pull-left li a {
+    transform: skewX(-20deg);
+  }
+  .pull-left li p {
+    transform: skewX(20deg);
+    display: inline-block;
+  }
+  header li a:hover {
+    background-color: #3D5AFE;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 14px 15px 14px !important;
+    transition: .3s;
+  }
+  header li a:active {
+    text-decoration: none;
+    color: #ccc;
+    padding: 15px 14px 15px 14px !important;
+    box-shadow: inset 0px 1px 2px #000;
+    transition: .1s;
+  }
+  .pull-left li {
+    padding: 15px 0px 20px 0px;
+    margin: 0px;
+  }
+  .pull-right li {
+    margin-top: 12px;
+    padding: 0px;
+  }
+  .pull-right li a {
+    margin-left: 2px;
+    padding: 2px;
+    background-color: #7986CB;
+    transform: skewX(-20deg);
+  }
+  .pull-right li a:hover {
+    background-color: #536DFE;
+  }
+  .pull-right li img {
+    margin: 0px;
+    padding: 0px;
+    width: 24px;
+    height: 24px;
+    transform: skewX(20deg);
+  }
+}
+  /*Jumbotron ----------------------------------------------------------------- */
+  .jumbotron {
+    background-image: url("https://imgur.com/AY6zHnl.png");
+    min-height: 400px;
+    height: 100%;
+    margin: 0px !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-weight: bold;
+    animation-name: fadeBG;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+  }
+  .jumbotron .container {
+    position: relative;
+    width: 80%;
+    top: 25%;
+    animation-name: fadeJumbo;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+  }
+  .jumbotron h1 {
+    color: #fff !important;
+    font-size: 48px;
+    text-shadow: 3px 3px 5px #000;
+  }
+  .jumbotron p {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #000;
+  }
+  .jumbotron .btn {
+    background: #fff;
+    /*border: 2px solid #fff;*/
+    transition: .2s;
+    transform: skewX(-20deg);
+  }
+  .jumbotron .btn p {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    text-shadow: none;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+    transform: skewX(20deg);
+  }
+  .jumbotron .btn:hover {
+    background: #ccc;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    skewX(-20deg);
+    transition: .3s;
+  }
+  .jumbotron .btn:active {
+    background: #999;
+    /*border: 2px solid #fff;*/
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: inset 0px 2px 5px #333;
+    skewX(-20deg);
+    transition: .3s;
+  }
+  
+  /*Border -------------------------------------------------------------------- */
+  .border {
+    background-color: #283593;
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    box-shadow: 0px 0px 2px #000;
+  }
+  .border .container {
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+  }
+  .border img {
+    height: 128px;
+  }
+  
+  /*Learn More ---------------------------------------------------------------- */
+  .learn-more {
+    padding-bottom: 40px;
+    background-color: #3949AB;
+    background-size: cover;
+    /*animation-name: fadeBGLearn;*/
+    /*animation-duration: 3s;*/
+  }
+  .learn-more .container {
+    align-content: center;
+    color: #fff;
+    padding-top: 80px;
+  }
+  .learn-more .col-md-4 {
+    text-align: center;
+    padding: 20px;
+    /*animation-name: fadeUpLearn;*/
+    /*animation-duration: 3s;*/
+  }
+  .learn-more .col-md-4 p {
+    text-align: justify;
+  }
+  .learn-more .col-md-4 img {
+    box-shadow: 0px 1px 5px #000;
+    border: 2px solid #fff;
+  }
+  .learn-more h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .learn-more a {
+    color: #00b0ff;
+  }
+  
+  /*About --------------------------------------------------------------------- */
+  .about {
+    padding-bottom: 40px;
+    background-color: #5C6BC0;
+  }
+  .about .container {
+    top: 0px;
+    color: #fff;
+    padding: 80px 10px 40px 10px;
+    text-align: justify;
+  }
+  .about img {
+    width: 128px;
+    height: 128px;
+    border: 2px solid #fff;
+    box-shadow: 0px 1px 5px #000;
+  }
+  .about .btn {
+    margin: 1px;
+    padding: 10px;
+    color: #000;
+  }
+  .about a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #eee;
+  }
+  .about a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #aaa;
+  }
+  
+  /*Gallery ------------------------------------------------------------------- */
+  .gallery {
+    background-color: #3949AB;
+    padding: 40px 0px 80px 0px;
+  }
+  .gallery .container {
+    margin: auto;
+    color: #fff;
+    width: 90%;
+    padding: 40px 0px 20px 0px;
+  }
+  .gallery h2 {
+    margin: 0px;
+    padding: 10px;
+  }
+  .gallery li{
+    display: inline;
+  }
+  .gallery li a{
+    width: 256px;
+    height: 256px;
+    float: left;
+    padding: 0px;
+    margin: 10px;
+    /*border: 2px solid #fff;*/
+    box-shadow: 0px 0px 4px #fff;
+    transition: .4s;
+  }
+  .gallery li a:hover {
+    transform:scale(1.025,1.025);
+    box-shadow: 0px 0px 10px #fff;
+    transition: .3s;
+  }
+  .gallery li a:active {
+    transform:scale(1, 1);
+    transition: .25s;
+  }
+  
+  /*Carousel*/
+  .carousel {
+    background-image: url(https://i.imgur.com/37r1jhW.png);
+    background-color: #7986CB;
+    background-repeat: repeat;
+    background-color: #aaa;
+    margin: 0px;
+    padding: 0px 10% 0px 10%;
+  }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 30%;
+    margin: auto;
+  }
+  
+  /*Modal --------------------------------------------------------------------- */
+  /* Add a dark gray background color to the modal header and center text */
+  .modal {
+    margin-top: 80px;
+    z-index: 9999;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    padding: 40px 50px;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-body {
+    background-color: #555;
+    padding: 40px 50px;
+  }
+  .modal iframe {
+    width: 100%;
+    height: 500px;
+  }
+  .modal-footer {
+    padding: 0px !important;
+  }
+  .modal-footer a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .modal-footer a:hover {
+    font-size: 12px;
+    text-decoration: none;
+    color: #aaa;
+  }
+  
+  /*FAQ ----------------------------------------------------------------------- */
+  .FAQ {
+    background-size: cover;
+    background-color: #5C6BC0;
+    padding-top: 40px;
+  }
+  .FAQ .container {
+    padding: 40px;
+    color: #fff;
+  }
+  .FAQ #Q {
+    background-color: #303F9F;
+    padding: 5px;
+    margin: 0px;
+  }
+  .FAQ #A {
+    background-color: #3F51B5;
+    padding: 5px;
+    margin: 0px;
+  }
+  
+  /*Sellout ------------------------------------------------------------------- */
+  .sellout {
+    background-color: #3949AB;
+  }
+  .sellout .container {
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+  }
+  .sellout h2 {
+    padding-bottom: 20px;
+  }
+  .sellout .btn {
+    width: 225px;
+    margin: 5px 0px 5px 0px;
+    background-color: #ccc;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 0px 3px #222;
+    transform: skewX(-20deg);
+    transition: .3s;
+  }
+  .sellout .btn p {
+    transform: skewX(20deg);
+  }
+  .sellout .btn:hover {
+    background-color: #ddd;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 0px 3px #000;
+    transition: .2s;
+  }
+  
+  /*Footer -------------------------------------------------------------------- */
+  .footer {
+    background-color: #1A237E;
+    color: #fff;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+  }
+  .footer a {
+    color: #E8EAF6;
+  }
+  .footer a:hover {
+    color: #C5CAE9;
+    text-decoration: none;
+  }

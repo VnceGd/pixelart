@@ -25,16 +25,16 @@
 }
 
 @keyframes slideNav {
-  from {top: -15%; }
-  to {top: -.6%; }
+  from {top: -90px; }
+  to {top: 0px; }
 }
 @keyframes fadeBG {
-  from {opacity: .7; -webkit-filter: blur(5px); filter: blur(5px);}
+  from {opacity: 0.2; -webkit-filter: blur(32px); filter: blur(32px);}
   to {opacity: 1; -webkit-filter: blur(0px); filter: blur(0px);}
 }
 @keyframes fadeJumbo {
   from {opacity: 0; top: 50%;}
-  to {opacity: 1; top: 25%;}
+  to {opacity: 1; top: 20%;}
 }
 
 /*MOBILE ---------------------------------------------------------------------- */
@@ -83,7 +83,7 @@
   }
   header {
     position: fixed;
-    top: -.6%;
+    top: 0px;
     width: 100%;
     height: 70px;
     background-color: #8C9EFF;
@@ -92,14 +92,15 @@
     transition: 0.3s;
     animation-name: slideNav;
     animation-iteration-count: 1;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
   }
   header:hover {
     position: fixed;
     width: 100%;
     height: 70px;
     background-color: #8C9EFF;
-    box-shadow: 0px 0px 20px #000;
+    box-shadow: 0px 0px 5px #000;
     opacity: 1.0;
     z-index: 9999;
     transition: 0.2s;
@@ -157,7 +158,7 @@
   .pull-right li a {
     margin-left: 2px;
     padding: 2px;
-    background-color: #7986CB;
+    background-color: #6A9EFF;
     transform: skewX(-20deg);
   }
   .pull-right li a:hover {
@@ -183,16 +184,17 @@
     font-weight: bold;
     animation-name: fadeBG;
     animation-iteration-count: 1;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
   }
   .jumbotron .container {
     position: relative;
     width: 80%;
-    top: 25%;
+    top: 20%;
     animation-name: fadeJumbo;
     animation-iteration-count: 1;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
   }
   .jumbotron h1 {
     color: #fff !important;
@@ -205,9 +207,9 @@
     text-shadow: 3px 3px 5px #000;
   }
   .jumbotron .btn {
-    background: #fff;
+    background: #eee;
     /*border: 2px solid #fff;*/
-    transition: .2s;
+    transition: .3s;
     transform: skewX(-20deg);
   }
   .jumbotron .btn p {
@@ -220,15 +222,16 @@
     transform: skewX(20deg);
   }
   .jumbotron .btn:hover {
-    background: #ccc;
+    background: #fff;
     color: #000;
     text-decoration: none;
     font-size: 18px;
+    box-shadow: 0px 0px 10px #fff;
     skewX(-20deg);
-    transition: .3s;
+    transition: .2s;
   }
   .jumbotron .btn:active {
-    background: #999;
+    background: #ddd;
     /*border: 2px solid #fff;*/
     color: #000;
     text-decoration: none;
@@ -240,11 +243,11 @@
   
   /*Border -------------------------------------------------------------------- */
   .border {
+    background: radial-gradient(circle, #3F51B5, #283593);
     background-color: #283593;
     width: 100%;
     height: 180px;
     background-size: cover;
-    box-shadow: 0px 0px 2px #000;
   }
   .border .container {
     padding-top: 20px;
@@ -253,6 +256,13 @@
   }
   .border img {
     height: 128px;
+  }
+  .border-shadow {
+    background-color: #000055;
+    width: 100%;
+    height: 5px;
+    background-size: cover;
+
   }
   
   /*Learn More ---------------------------------------------------------------- */
@@ -278,7 +288,7 @@
     text-align: justify;
   }
   .learn-more .col-md-4 img {
-    box-shadow: 0px 1px 5px #000;
+    box-shadow: 3px 5px #000;
     border: 2px solid #fff;
   }
   .learn-more h2 {
@@ -304,7 +314,7 @@
     width: 128px;
     height: 128px;
     border: 2px solid #fff;
-    box-shadow: 0px 1px 5px #000;
+    box-shadow: 2px 2px #000;
   }
   .about .btn {
     margin: 1px;
@@ -346,14 +356,13 @@
     float: left;
     padding: 0px;
     margin: 10px;
-    /*border: 2px solid #fff;*/
     box-shadow: 0px 0px 4px #fff;
-    transition: .4s;
+    transition: .3s;
   }
   .gallery li a:hover {
-    transform:scale(1.025,1.025);
+    transform:scale(1.05,1.05);
     box-shadow: 0px 0px 10px #fff;
-    transition: .3s;
+    transition: .2s;
   }
   .gallery li a:active {
     transform:scale(1, 1);
@@ -376,7 +385,6 @@
   }
   
   /*Modal --------------------------------------------------------------------- */
-  /* Add a dark gray background color to the modal header and center text */
   .modal {
     margin-top: 80px;
     z-index: 9999;

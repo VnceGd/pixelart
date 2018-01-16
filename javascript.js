@@ -2,7 +2,7 @@
   //Creates a smooth scrolling effect when links are clicked.
   $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
-    $(".pull-left a, .jumbotron a[href='#learn-more'], .about a, .footer a[href='#jumbo']").on('click', function(event) {
+    $(".pull-left a, .jumbotron a[href='#learn-more'], .about a[href='#footer'], .footer a[href='#jumbo']").on('click', function(event) {
   
     // Prevent default anchor click behavior
     event.preventDefault();

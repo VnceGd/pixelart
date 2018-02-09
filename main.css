@@ -33,8 +33,9 @@
   to {opacity: 1; -webkit-filter: blur(0px); filter: blur(0px);}
 }
 @keyframes fadeJumbo {
-  from {opacity: 0; top: 50%;}
-  to {opacity: 1; top: 20%;}
+  0% {opacity: 0; top: 50%;}
+  50% {opacity: 0.8; top: 19%;}
+  100% {opacity: 1; top: 20%;}
 }
 
 /*MOBILE ---------------------------------------------------------------------- */
@@ -86,9 +87,9 @@
     top: -2%;
     width: 100%;
     height: 70px;
-    background-color: #1A237E;
+    background-color: #0D47A1;
     opacity: 0.8;
-    z-index: 5555;
+    z-index: 9999;
     transition: 0.3s;
     animation-name: slideNav;
     animation-iteration-count: 1;
@@ -116,12 +117,12 @@
   header li a {
     position: relative;
     display: block;
-    background-color: #536DFE;
+    background-color: #1E88E5;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
-    margin: 0px 1px 0px 1px;
-    padding: 15px 14px 15px 14px !important;
+    margin-right: 3px;
+    padding: 15px !important;
     text-transform: uppercase;
     text-decoration: none;
     transition: .4s;
@@ -134,39 +135,39 @@
     display: inline-block;
   }
   header li a:hover {
-    background-color: #3D5AFE;
+    background-color: #1976D2;
     color: #fff;
     text-decoration: none;
-    padding: 15px 14px 15px 14px !important;
+    padding: 15px !important;
     transition: .3s;
   }
   header li a:active {
     text-decoration: none;
-    color: #ccc;
-    padding: 15px 14px 15px 14px !important;
-    box-shadow: inset 0px 1px 2px #000;
+    color: #ddd;
+    padding: 15px !important;
+    box-shadow: inset 0px 1px 2px #1565C0;
     transition: .1s;
   }
   .pull-left li {
-    padding: 15px 0px 20px 0px;
-    margin: 0px;
+    padding: 20px;
+    margin: 0;
   }
   .pull-right li {
-    margin-top: 12px;
-    padding: 0px;
+    padding: 20px;
+    padding: 0;
   }
   .pull-right li a {
-    margin-left: 2px;
+    margin-left: 3px;
     padding: 2px;
-    background-color: #6A9EFF;
+    background-color: #1E88E5;
     transform: skewX(-20deg);
   }
   .pull-right li a:hover {
-    background-color: #536DFE;
+    background-color: #1976D2;
   }
   .pull-right li img {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     width: 24px;
     height: 24px;
     transform: skewX(20deg);
@@ -190,7 +191,7 @@
     top: 20%;
     animation-name: fadeJumbo;
     animation-iteration-count: 1;
-    animation-duration: .5s;
+    animation-duration: 1s;
     animation-timing-function: ease;
   }
   .jumbotron h1 {
@@ -238,8 +239,8 @@
   
   /*Border -------------------------------------------------------------------- */
   .border {
-    background: radial-gradient(circle, #3F51B5, #283593);
-    background-color: #283593;
+    background: radial-gradient(circle, #1E88E5, #0D47A1);
+    background-color: #0D47A1;
     width: 100%;
     height: 180px;
     background-size: cover;
@@ -262,7 +263,7 @@
   /*Learn More ---------------------------------------------------------------- */
   .learn-more {
     padding-bottom: 40px;
-    background-color: #C5CAE9;
+    background-color: #BBDEFB;
     background-size: cover;
   }
   .learn-more .container {
@@ -293,7 +294,7 @@
   /*About --------------------------------------------------------------------- */
   .about {
     padding-bottom: 40px;
-    background-color: #E8EAF6;
+    background-color: #E3F2FD;
   }
   .about .container {
     top: 0px;
@@ -327,7 +328,7 @@
   
   /*Gallery ------------------------------------------------------------------- */
   .gallery {
-    background-color: #C5CAE9;
+    background-color: #BBDEFB;
     padding: 40px 0px 80px 0px;
   }
   .gallery .container {
@@ -435,7 +436,7 @@
   
   /*Sellout ------------------------------------------------------------------- */
   .sellout {
-    background-color: #C5CAE9;
+    background-color: #90CAF9;
   }
   .sellout .container {
     color: #000;
@@ -471,7 +472,7 @@
   
   /*Footer -------------------------------------------------------------------- */
   .footer {
-    background-color: #1A237E;
+    background-color: #0D47A1;
     color: #fff;
     width: 100%;
     padding-top: 15px;
@@ -481,9 +482,9 @@
     text-align: center;
   }
   .footer a {
-    color: #E8EAF6;
+    color: #E3F2FD;
   }
   .footer a:hover {
-    color: #C5CAE9;
+    color: #BBDEFB;
     text-decoration: none;
   }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Vincent Nguyen 2015-2017 -->
+<!--Vincent Nguyen 2015-2018 -->
 <!--References: W3Schools, Google Design-->
 <html lang="en">
   <head>
@@ -16,11 +16,9 @@
     <script src="javascript.js"></script>
     
     <link rel="shortcut icon" href="https://i.imgur.com/xPla8Y9.png">
-
+  
+    <title> Vincent Nguyen </title>
   </head>
-  
-  <title> Vincent Nguyen's Website </title>
-  
   <body>
     <!--NAVIGATION BAR-->
     <header id="header">
@@ -33,7 +31,6 @@
             <li> <a href="#jumbo"> Home </a> </li>
             <li> <a href="#about"> About </a> </li>
             <li> <a href="#gallery"> Gallery </a> </li>
-<!--             <li> <a href="#FAQ"> FAQ </a> </li> -->
             <li class="dropdown-header"> Follow Vincent: </li>
             <li><a target="_blank" href="https://facebook.com/16nguyenv"> <img src="https://i.imgur.com/9lnKj27.png"> Facebook </a></li>
 <!--             <li><a target="_blank" href="https://twitter.com/16nguyenv"> <img  src="https://i.imgur.com/Onyj5Db.png"/> Twitter </a></li> -->
@@ -45,7 +42,6 @@
           <li><a href="#jumbo" data-toggle="tooltip" title="Return to homepage"> <p> <span class="glyphicon glyphicon-home"></span> Home </p></a></li>
           <li><a href="#about" data-toggle="tooltip" title="Learn about Vincent"> <p> About </p> </a></li>
           <li><a href="#gallery" data-toggle="tooltip" title="Browse the gallery"> <p> Gallery </p> </a></li>
-<!--           <li><a href="#FAQ" data-toggle="tooltip" title="Frequently Asked Questions"> <p> FAQ </p> </a></li> -->
         </ul>
         <ul class="pull-right">
           <li><a target="_blank" href="https://facebook.com/16nguyenv" data-toggle="tooltip" title="Visit Vincent's Facebook page"> <img src="https://i.imgur.com/9lnKj27.png"/> </a></li>
@@ -107,7 +103,8 @@
         <h1> About Vincent </h1>
         <div class="hiddenStuff">
           <p> Vincent is currently a sophomore at Drexel University studying Computer Science and has been creating pixel art since highschool, mostly as a hobby. </p>
-          <a class="btn" target="_blank" href="../portfolio/"> Check out Vincent's portfolio </a>
+          <a class="btn" target="_blank" href="../portfolio"> Check out Vincent's portfolio </a>
+          <a class="btn" target="_blank" href="./resume2018.pdf"> Check out Vincent's r&eacute;sum&eacute; </a>
           <br>
           <p> Interests:
             <ul>
@@ -123,7 +120,9 @@
           </p> <br>
           <img src="https://i.imgur.com/s8eoQc2.gif"/>
           <br> <br>
-          <p>(<i>Note: This website is still under development. See the<a href="#footer"> footer </a>for contact information and to offer feedback. If you are viewing this website on a mobile device, some sections, especially the gallery, may appear abnormal.</i>)</p> 
+          <p>(<i>Note: This website is still under development. 
+            See the<a href="#footer"> footer </a>for contact information and to offer feedback. 
+            Webpage is not yet completely mobile-friendly.</i>)</p> 
         </div>
       </div>
     </div>
@@ -131,7 +130,8 @@
     <!--GALLERY-->
     <div class="gallery" id="gallery">
       <div class="container">
-        <h2> Pixel Art Gallery </h2>
+        <h2> Pixel Art Gallery (2015-2017) </h2>
+        <p> A collection of 256 x 256px images. Note: An update to the gallery is in the works (coming soon...?). </p>
         <div id="carousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -240,24 +240,6 @@
         </div>
       </div>
     </div>
-    
-    <!--FAQ
-    <div class="FAQ" id="FAQ">
-      <div class="container">
-        <h1> Frequently Asked Questions </h1>
-        <div class="hiddenStuff">
-          <p id="Q"> <b>Q:</b> Are there even any questions yet? </p>
-          <p id="A"> <b>A:</b> Just one! </p>
-          <br>
-          <p id="Q"> <b>Q:</b> Test Question </p>
-          <p id="A"> <b>A:</b> Test Answer </p>
-          <br>
-          <p id="Q"> <b>Q:</b> Test Question </p>
-          <p id="A"> <b>A:</b> Test Answer </p>
-        </div>
-      </div>
-    </div>
-    -->
   
     <!--SELLOUT-->
     <div class="sellout">
@@ -266,13 +248,11 @@
           <div class="col-md-4">
             <div class="dropup">
               <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> 
-                <p> Look at Pixel Art <span class="caret"></span> </p>
+                <p> Check out Pixel Art <span class="caret"></span> </p>
               </button>
               <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-header"> Check out other artists </li>
-                <li> <a target="_blank" href="https://www.reddit.com/r/pixelart"> Pixel art on Reddit </a> </li>
-                <li class="dropdown-header"> Vincent's Galleries </li>
-                <li> <a target="_blank" href="https://imgur.com/a/r6RmY"> Website Art </a> </li>
+                <li> <a target="_blank" href="https://www.reddit.com/r/pixelart"> Pixel Art Subreddit </a> </li>
+                <li> <a target="_blank" href="https://vncegd.imgur.com"> Vincent's Galleries </a> </li>
               </ul>
             </div>
           </div>
@@ -282,16 +262,10 @@
                 <p> Learn to Code <span class="caret"></span> </p> 
               </button>
               <ul class="dropdown-menu dropdown-menu-right">
-                <li class="dropdown-header"> Learn the Basics </li>
-                <li> <a target="_blank" href="https://codecademy.com"> Codecademy </a></li>
+                <li> <a target="_blank" href="https://www.w3schoools.com"> W3Schools </a></li>
+                <li> <a target="_blank" href="https://www.codecademy.com"> Codecademy </a></li>
                 <li> <a target="_blank" href="https://www.freecodecamp.com/"> freeCodeCamp </a></li>
                 <li> <a target="_blank" href="https://dash.generalassemb.ly/"> Dash </a></li>
-                <li class="dropdown-header"> Know how to code? </li>
-                <li> <a target="_blank" href="https://c9.io"> Cloud 9 </a> </li>
-                <li> <a target="_blank" href="https://codepen.io/"> CodePen </a> </li>
-                <li> <a target="_blank" href="https://processing.org"> Processing </a> </li>
-                <li> <a target="_blank" href="https://notepad-plus-plus.org/"> Notepad ++ </a> </li>
-                <!--<li class="dropdown-header"> Other Stuff </li>-->
               </ul>
             </div>
           </div>
@@ -314,7 +288,7 @@
     <!--FOOTER-->
     <div class="footer" id="footer">
       <p><a href="#jumbo" data-toggle="tooltip" title="Return to top"> <span class="glyphicon glyphicon-chevron-up"></span></a></p>
-      <p> Created by VN using <a target="_blank" href="https://c9.io"> Cloud 9 </a>. Published with <a target="_blank" href="https://github.com"> Github </a>. 2015-2017 </p>
+      <p> Created by VN using <a target="_blank" href="https://c9.io"> Cloud 9 </a>. Published with <a target="_blank" href="https://github.com"> Github </a>. 2015-2018 </p>
       <p> <a href="#" data-toggle="modal" data-target="#myModal"> Submit Feedback or Comments </a> </p>
       <p> Contact Vincent at <a href="mailto:16nguyenv@gmail.com?Subject="Website%20Feedback""> <span class="glyphicon glyphicon-envelope"></span> 16nguyenv@gmail.com </a> </p>
     </div>

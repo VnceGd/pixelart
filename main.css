@@ -149,11 +149,11 @@
     transition: .1s;
   }
   .pull-left li {
-    padding: 20px;
+    padding: 0;
     margin: 0;
   }
   .pull-right li {
-    padding: 20px;
+    padding: 0;
     padding: 0;
   }
   .pull-right li a {

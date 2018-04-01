@@ -68,11 +68,10 @@
   }
 }
 
-
 @media screen and (min-width: 640px) {
   /*Body ---------------------------------------------------------------------- */
-  .body {
-    position: relative;
+  html, body {
+    height: 100%;
   }
   
   /*Navigation Bar ------------------------------------------------------------ */
@@ -137,6 +136,13 @@
     padding: 15px !important;
     box-shadow: inset 0px 1px 2px #1565C0;
     transition: .1s;
+  }
+  header p {
+    margin: 0;
+  }
+  header img {
+    width: 40px;
+    height: 40px;
   }
   .pull-left, .pull-right {
    margin-top: 15px; 
@@ -470,6 +476,7 @@
   }
   .sellout .btn p {
     transform: skewX(20deg);
+    margin: 0;
   }
   .sellout .btn:hover {
     background-color: #ddd;
